@@ -10,7 +10,9 @@
       <a href="index.html"> <img src="img/logo-technomart.svg" width="107" height="17" alt="Техномарт лого"> </a>
       
       <form action="https://echo.htmlacademy.ru/" method="get">
-        <input type="search" name="search" placeholder="Поиск:"> 
+        <label for="search">Поиск</label>
+        <input type="search" name="search" id="seatch" placeholder="Поиск:"> 
+        <button type="submit" class="visually-hidden">Отправить</button>
       </form>
 
        <ul>
@@ -52,8 +54,7 @@
      
       <section>
       <h3> Фильтр </h3>
-      <form class="" action="https://echo.htmlacademy.ru/" method="get" 
-      oninput="priceoutput.value=filter-price.value">
+      <form class="" action="https://echo.htmlacademy.ru/" method="get">
         <fieldset>
           <!-- двойной range не осилил, должен показывать цену по слайдеру, но нет -->
             <legend> Цена: </legend>
@@ -63,11 +64,11 @@
          <fieldset>
           <legend> Производители: </legend>
               <ul>
-                 <li> <label> <input type="checkbox" name="Bosch" value="Bosch" checked> Bosch </label> </li>
-                 <li> <label> <input type="checkbox" name="Interskol" value="Interskol"> Интерскол </label> </li>
-                 <li> <label> <input type="checkbox" name="Makita" value="Makita" checked> Makita </label> </li>
-                 <li> <label> <input type="checkbox" name="Dewalt" value="Dewalt"> Dewalt </label> </li>
-                 <li> <label> <input type="checkbox" name="Hitachi" value="Hitachi"> Hitachi </label> </li>
+                 <li> <label> <input type="checkbox" name="brand" value="Bosch" checked> Bosch </label> </li>
+                 <li> <label> <input type="checkbox" name="brand" value="Interskol"> Интерскол </label> </li>
+                 <li> <label> <input type="checkbox" name="brand" value="Makita" checked> Makita </label> </li>
+                 <li> <label> <input type="checkbox" name="brand" value="Dewalt"> Dewalt </label> </li>
+                 <li> <label> <input type="checkbox" name="brand" value="Hitachi"> Hitachi </label> </li>
               </ul>
           </fieldset>
           <fieldset>
@@ -104,8 +105,10 @@
                 </a>
                 <p> 30500 P.</p>
                 <p> 25500 P.</p>
-                <a href="blank.html"> Купить </a>
-                <a href="blank.html"> В закладки </a>
+                <ul>
+                   <li> <a href="blank.html"> Купить </a> </li>
+                   <li> <a href="blank.html"> В закладки </a> </li>
+                </ul>
             </li>
             <li>
                 <img src="img/bfg6000.jpg" width="144" height="128" alt="Bosch BFG 6000">
@@ -114,8 +117,10 @@
                 </a>
                 <p> 30500 P.</p>
                 <p> 25500 P.</p>
-                <a href="blank.html"> Купить </a>
-                <a href="blank.html"> В закладки </a>
+                <ul>
+                  <li> <a href="blank.html"> Купить </a> </li>
+                  <li> <a href="blank.html"> В закладки </a> </li>
+               </ul>
             </li>
             <li>
                 <img src="img/bfg6000.jpg" width="144" height="128" alt="Bosch BFG 6000">
@@ -124,8 +129,10 @@
                 </a>
                 <p> 30500 P.</p>
                 <p> 25500 P.</p>
-                <a href="blank.html"> Купить </a>
-                <a href="blank.html"> В закладки </a>
+                <ul>
+                  <li> <a href="blank.html"> Купить </a> </li>
+                  <li> <a href="blank.html"> В закладки </a> </li>
+               </ul>
             </li>
             <li>
                 <img src="img/bfg3000.jpg" width="127" height="112" alt="Bosch BFG 3000">
@@ -134,8 +141,10 @@
                 </a>
                 <p> 22500 P.</p>
                 <p> 15500 P.</p>
-                <a href="blank.html"> Купить </a>
-                <a href="blank.html"> В закладки </a>
+                <ul>
+                  <li> <a href="blank.html"> Купить </a> </li>
+                  <li> <a href="blank.html"> В закладки </a> </li>
+               </ul>
             </li>
             <li>
                 <img src="img/bfg6000.jpg" width="144" height="128" alt="Bosch BFG 6000">
@@ -144,8 +153,10 @@
                 </a>
                 <p> 30500 P.</p>
                 <p> 25500 P.</p>
-                <a href="blank.html"> Купить </a>
-                <a href="blank.html"> В закладки </a>
+                <ul>
+                  <li> <a href="blank.html"> Купить </a> </li>
+                  <li> <a href="blank.html"> В закладки </a> </li>
+               </ul>
             </li>
             <li>
                 <img src="img/bfg2000.jpg" width="127" height="112" alt="Bosch BFG 2000">
@@ -153,8 +164,10 @@
                   <h4>Перфоратор BOSCH <br> BFG 2000</h4>
                 </a>
                 <p> 12500 P.</p>
-                <a href="blank.html"> Купить </a>
-                <a href="blank.html"> В закладки </a>
+                <ul>
+                  <li> <a href="blank.html"> Купить </a> </li>
+                  <li> <a href="blank.html"> В закладки </a> </li>
+               </ul>
             </li>
             <li>
                 <img src="img/bfg3000.jpg" width="127" height="112" alt="Bosch BFG 3000">
@@ -163,8 +176,10 @@
                 </a>
                 <p> 22500 P.</p>
                 <p> 15500 P.</p>
-                <a href="blank.html"> Купить </a>
-                <a href="blank.html"> В закладки </a>
+                <ul>
+                  <li> <a href="blank.html"> Купить </a> </li>
+                  <li> <a href="blank.html"> В закладки </a> </li>
+               </ul>
             </li>
             <li>
                 <img src="img/bfg6000.jpg" width="144" height="128" alt="Bosch BFG 6000">
@@ -173,8 +188,10 @@
                 </a>
                 <p> 30500 P.</p>
                 <p> 25500 P.</p>
-                <a href="blank.html"> Купить </a>
-                <a href="blank.html"> В закладки </a>
+                <ul>
+                  <li> <a href="blank.html"> Купить </a> </li>
+                  <li> <a href="blank.html"> В закладки </a> </li>
+               </ul>
             </li>
             <li>
                 <img src="img/bfg2000.jpg" width="127" height="112" alt="Bosch BFG 2000">
@@ -182,8 +199,10 @@
                   <h4>Перфоратор BOSCH <br> BFG 6000</h4>
                 </a>
                 <p> 12500 P.</p>
-                <a href="blank.html"> Купить </a>
-                <a href="blank.html"> В закладки </a>
+                <ul>
+                  <li> <a href="blank.html"> Купить </a> </li>
+                  <li> <a href="blank.html"> В закладки </a> </li>
+               </ul>
             </li>
           </ul>
 
