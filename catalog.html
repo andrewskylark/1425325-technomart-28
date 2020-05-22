@@ -8,8 +8,11 @@
   <body>
     <header>
       <a href="index.html"> <img src="img/logo-technomart.svg" width="107" height="17" alt="Техномарт лого"> </a>
-      <!-- здесь будут формы -->
-      <!-- <input type="search" name="search" value="Поиск:"> -->
+      
+      <form action="https://echo.htmlacademy.ru/" method="get">
+        <input type="search" name="search" placeholder="Поиск:"> 
+      </form>
+
        <ul>
          <li> <a href="blank.html">Закладки:</a> </li>
          <li> <a href="blank.html">Корзина:</a> </li>
@@ -39,43 +42,47 @@
 
     </header>
     <main>
-      <!-- помеченное красным не размечаю -->
       <ul>
         <li><a href="index.html"></a>Главная</li>
         <li><a href="catalog.html">Каталог</a></li>
-        <li><a href="tools.html">Инструмент</a></li>
+        <li><a href="blank.html">Инструмент</a></li>
         <li> <a> Перфораторы </a> </li>
       </ul>
       <h2>Перфораторы</h2>
-<!-- здесь будет фильтр -->
-    <section>
+     
+      <section>
       <h3> Фильтр </h3>
-      <form class="" action="https://echo.htmlacademy.ru/" method="post">
+      <form class="" action="https://echo.htmlacademy.ru/" method="get" 
+      oninput="priceoutput.value=filter-price.value">
         <fieldset>
+          <!-- двойной range не осилил, должен показывать цену по слайдеру, но нет -->
             <legend> Цена: </legend>
-       <!-- форма цены-->
-     </fieldset>
+            <input type="range" id="filter-price" name="filter-price" min="0" max="40000" step="1">
+            <output name="priceoutput" for="filter-price"></output> 
+        </fieldset>
          <fieldset>
           <legend> Производители: </legend>
               <ul>
                  <li> <label> <input type="checkbox" name="Bosch" value="Bosch" checked> Bosch </label> </li>
-                 <li> <label> <input type="checkbox" name="Интерскол" value="Interskol"> Интерскол </label> </li>
+                 <li> <label> <input type="checkbox" name="Interskol" value="Interskol"> Интерскол </label> </li>
                  <li> <label> <input type="checkbox" name="Makita" value="Makita" checked> Makita </label> </li>
                  <li> <label> <input type="checkbox" name="Dewalt" value="Dewalt"> Dewalt </label> </li>
-                 <li> <label> <input type="checkbox" name="Hitachi" value="Hitachi" checked> Hitachi </label> </li>
+                 <li> <label> <input type="checkbox" name="Hitachi" value="Hitachi"> Hitachi </label> </li>
               </ul>
           </fieldset>
           <fieldset>
             <legend> Питание: </legend>
-               <label> <input type="radio" name="power" value="battery" checked> Аккумуляторные </label> <br>
-               <label> <input type="radio" name="power" value="power-plug"> Сетевые </label>
+             <ul>
+               <li> <label> <input type="radio" name="power-source" value="battery" checked> Аккумуляторные </label> </li>
+               <li> <label> <input type="radio" name="power-source" value="power-plug"> Сетевые </label> </li>
+             </ul>
            </fieldset>
           <button type="submit"> Показать </button>
       </form>
       </section>
 
       <section>
-         <h3>Список перфораторов</h3>
+         <h3 class="visually-hidden">Список перфораторов</h3>
          <!-- здесь булет фильтр сортировки-->
          <ul>
            <li>
@@ -225,9 +232,9 @@
      <p>© 2010–2019 Компания «Техномарт»<br>
            Все права защищены</p>
       <ul>
-       <li> <a href="blank.html">VK</a> </li>
-       <li> <a href="blank.html">FB</a> </li>
-       <li> <a href="blank.html">IG</a> </li>
+        <li> <a href="blank.html" aria-label="Вконтакте">VK</a> </li>
+        <li> <a href="blank.html" aria-label="Фейсбук">FB</a> </li>
+        <li> <a href="blank.html" aria-label="Instagramm">IG</a> </li>
      </ul>
 
      <p>обратная связь: <br>
@@ -238,5 +245,20 @@
        <a href="https://htmlacademy.ru/intensive/htmlcss"> htmlacademy.ru</a>
      </p>
     </footer>
+
+
+  <section class="popup-buy">
+    <h3>Товар добавлен в корзину!</h3>
+    <ul>
+      <li> 
+        <a href="blank.html">Оформить заказ</a>
+      </li>
+      <li>
+        <a href="blank.html">продолжить покупки</a>
+      </li>
+    </ul>
+    <button type="button"> <span class="cisually-hidden">Закрыть</span></button>
+  </section>
+
   </body>
 </html>

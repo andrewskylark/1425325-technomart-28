@@ -8,8 +8,12 @@
   <body>
     <header>
       <a> <img src="img/logo-technomart.svg" width="107" height="17" alt="Техномарт лого"> </a>
-      <!-- здесь будут формы -->
-      <!-- <input type="search" name="search" value="Поиск:"> -->
+      
+      <form action="https://echo.htmlacademy.ru/" method="get">
+        <input type="search" name="search" placeholder="Поиск:"> 
+      </form>
+
+
        <ul>
          <li> <a href="blank.html">Закладки:</a> </li>
          <li> <a href="blank.html">Корзина:</a> </li>
@@ -40,9 +44,8 @@
     </header>
     <main>
       <section>
-        <h2>Промо-блок</h2>
-         <!-- 3.7. Промо-блок («материалы», «инструмент», …): слайдер. Вёрстка всех слайдов обязательна.
-       Здесь ьудет слайд, но я пока не знаю где его браить и как верстать-->
+        <h2 class="visually-hidden">Промо-блок</h2>
+        
         <ul>
           <li>
             <h3>Материалы</h3>
@@ -239,9 +242,9 @@
      <p>© 2010–2019 Компания «Техномарт»<br>
            Все права защищены</p>
       <ul>
-       <li> <a href="blank.html">VK</a> </li>
-       <li> <a href="blank.html">FB</a> </li>
-       <li> <a href="blank.html">IG</a> </li>
+       <li> <a href="blank.html" aria-label="Вконтакте">VK</a> </li>
+       <li> <a href="blank.html" aria-label="Фейсбук">FB</a> </li>
+       <li> <a href="blank.html" aria-label="Instagramm">IG</a> </li>
      </ul>
 
      <p>обратная связь: <br>
@@ -252,5 +255,30 @@
        <a href="https://htmlacademy.ru/intensive/htmlcss"> htmlacademy.ru</a>
      </p>
     </footer>
+
+   <section class="form-popup">
+     <h3 class="visually-hidden">Оформить заказ</h3>
+     <form action="https://echo.htmlacademy.ru/" method="POST">
+      <p>
+        <label for="name"> Ваше имя </label>
+        <input type="text" name="name" id="name" placeholder="Имя Фамилия" required> 
+        <label for="email"> Ваш e-mail </label>
+        <input type="email" name="e-mail" id="email" placeholder="email@example.com" required>
+      </p>
+      <p>
+        <label for="message">Текст письма</label>
+        <textarea rows="5" cols="50" id="message" name="message" placeholder="В свободной форме"></textarea>
+       </p>
+       <p> <button type="submit">оформить заказ</button> </p>
+     </form>
+     <button type="button"> <span class="visually-hidden"> Закрыть</span> </button>
+    </section>
+
+    <section class="map-popup">
+      <h3 class="visually-hidden">Карта проезда</h3>
+      <!-- здесь булет попап карта-->
+      <button type="button"> <span class="visually-hidden">Закрыть</span></button>
+    </section>
+
   </body>
 </html>
