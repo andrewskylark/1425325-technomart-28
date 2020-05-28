@@ -66,15 +66,15 @@ a {text-decoration: none;}
     line-height: 23px;
     color: var(--red);
 }
-
-.contacts a {
+.contacts-header {text-align: center;}
+.contacts-header a {
     font-weight: bold;
     font-size: 21px;
     line-height: 30px;
     color: var(--red);
     background-image: url(img/icon-phone.svg) no-repeat;
 }
-.contacts p {
+.contacts-header p {
     font-size: 14px;
     line-height: 24px;
     color: var(--black);
@@ -109,13 +109,30 @@ a {text-decoration: none;}
 .footer-nav a:nth-of-type(n+5) {
     color: var(--orange-link);
 }
+.social {
+    text-align: center;
+}
+/* пытаюсь задать иконки и фон, но не рабьотает */
 .social-btn {
     background-color: var(--blue-social);
     width: 42px;
     height: 42px;
     border-radius: 50%;
 }
-.social-vk {background-image: url(img/icon-vk.svg) no-repeat;}
+.social-vk {
+    background-image: url(img/icon-vk.svg) no-repeat;
+    background-position: center;
+}
+
+.social-fb {
+    background-image: url(img/icon-fb.svg) no-repeat;
+    background-position: center;
+}
+
+.social-fb {
+    background-image: url(img/icon-insta.svg) no-repeat;
+    background-position: center;
+}
 
 .logo-top {
     background-color: var(--red);
