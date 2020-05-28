@@ -1,0 +1,139 @@
+:root {
+    --white: #FFFFFF;
+    --black: #000000;
+    --dark-blue: #293449;
+    --dark-blue-nav: #32425C;
+    --blue-social: #212A3A;
+    --light-grey: #F1F5F7;
+    --green: #63A63E;
+    --red: #EE3643;
+    --orange: #FFBF47;
+    --blue: #3BBCE3;
+    --purple: #DC91D8;
+    --light-green: #8ED78F;
+    --yellow: #FFC047;
+    --orange-link: #FFD180;
+}
+*, *::before, *::after (box-sizing: border-box;)
+
+body {
+    min-width: 960px;
+    margin: 0;
+    padding: 0;
+    font-family: font-family: "Cuprum", sans-serif;
+}
+
+img {
+    max-width: 100%;
+    height: auto;}
+
+a {text-decoration: none;}
+
+.visually-hidden {
+    position: absolute;
+    clip: rect(0 0 0 0);
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0px;
+    padding: 0px;
+    overflow: hidden;
+}
+.wrapper {
+    max-width: 940px;
+    margin: 0 auto;
+}
+.header-main {
+    font-size: 18px;
+    line-height: 24px;
+    height: ;
+    background-color: var(--light-grey);
+}
+
+.header-main  li{list-style: none;}
+
+.header-main a { color: var(--white);}
+
+.header-top {
+    background-color: var(--dark-blue);
+    color: var(--white);
+    height: ;
+}
+
+.header-main h1 {
+    font-style: italic;    
+    font-size: 16px;
+    line-height: 23px;
+    color: var(--red);
+}
+
+.contacts a {
+    font-weight: bold;
+    font-size: 21px;
+    line-height: 30px;
+    color: var(--red);
+    background-image: url(img/icon-phone.svg) no-repeat;
+}
+.contacts p {
+    font-size: 14px;
+    line-height: 24px;
+    color: var(--black);
+}
+
+.login-header a {color: var(--black);}
+
+.header-main nav {
+    background-color: var(--dark-blue-nav);
+    box-shadow: inset 0px -5px 0px #293449;
+}
+.footer-main li {list-style: none;}
+.footer-top {
+    background-color: var(--dark-blue-nav);
+    color: var(--white);
+    font-size: 18px;
+    line-height: 24px;
+}
+.footer-bottom {
+    background-color: var(--dark-blue);
+    color: var(--white);
+    font-size: 16px;
+    line-height: 18px;
+}
+.footer-bottom a {
+    color: var(--orange-link);
+}
+.footer-nav a {
+    color: var(--white);
+}
+/* пытаюсь закрасить последние 4 ссылки золотым */
+.footer-nav a:nth-of-type(n+5) {
+    color: var(--orange-link);
+}
+.social-btn {
+    background-color: var(--blue-social);
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+}
+.social-vk {background-image: url(img/icon-vk.svg) no-repeat;}
+
+.logo-top {
+    background-color: var(--red);
+    box-shadow: inset 0px -5px 0px rgba(0, 0, 0, 0.24);
+    padding-top: 12px;
+    padding-bottom: 17px;
+    padding-left: 55px;
+    padding-right: 57px;
+}
+
+.logo-bottom {
+    background-color: var(--red);
+    box-shadow: inset 0px -5px 0px rgba(0, 0, 0, 0.24);
+    padding-top: 20px;
+    padding-bottom: 25px;
+    padding-left: 41px;
+    padding-right: 41px;
+}
+.map-popup {display: none;}
+.form-popup {display: none;}
+
