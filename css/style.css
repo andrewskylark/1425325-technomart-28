@@ -1,18 +1,18 @@
 :root {
-    --white: #FFFFFF;
-    --black: #000000;
-    --dark-blue: #293449;
-    --dark-blue-nav: #32425C;
-    --blue-social: #212A3A;
-    --light-grey: #F1F5F7;
-    --green: #63A63E;
-    --red: #EE3643;
-    --orange: #FFBF47;
-    --blue: #3BBCE3;
-    --purple: #DC91D8;
-    --light-green: #8ED78F;
-    --yellow: #FFC047;
-    --orange-link: #FFD180;
+    --text-header: #FFFFFF;
+    --text-main: #000000;
+    --primary: #293449;
+    --secondary: #32425C;
+    --social-btn: #212A3A;
+    --accent: #F1F5F7;
+    --purchase: #63A63E;
+    --button: #EE3643;
+    --promo-1: #FFBF47;
+    --promo-2: #3BBCE3;
+    --promo-3: #DC91D8;
+    --promo-4: #8ED78F;
+    --promo-5: #FFC047;
+    --link-secondary: #FFD180;
 }
 *, *::before, *::after (box-sizing: border-box;)
 
@@ -20,12 +20,13 @@ body {
     min-width: 960px;
     margin: 0;
     padding: 0;
-    font-family: font-family: "Cuprum", sans-serif;
+    font-family: "Cuprum", sans-serif;
 }
 
 img {
     max-width: 100%;
-    height: auto;}
+    height: auto;
+}
 
 a {text-decoration: none;}
 
@@ -40,102 +41,90 @@ a {text-decoration: none;}
     overflow: hidden;
 }
 .wrapper {
-    max-width: 940px;
+    width: 960px;
     margin: 0 auto;
 }
 .header-main {
     font-size: 18px;
     line-height: 24px;
-    height: ;
-    background-color: var(--light-grey);
+    background-color: var(--accent);
 }
 
-.header-main  li{list-style: none;}
+.header-main  li {
+    list-style: none;
+}
 
-.header-main a { color: var(--white);}
+.header-main a { 
+    color: var(--text-header);
+}
 
 .header-top {
-    background-color: var(--dark-blue);
-    color: var(--white);
-    height: ;
+    background-color: var(--primary);
+    color: var(--text-header);
 }
 
 .header-main h1 {
     font-style: italic;    
     font-size: 16px;
     line-height: 23px;
-    color: var(--red);
+    color: var(--button);
 }
-.contacts-header {text-align: center;}
+.contacts-header {
+    text-align: center;
+}
 .contacts-header a {
     font-weight: bold;
     font-size: 21px;
     line-height: 30px;
-    color: var(--red);
+    color: var(--button);
     background-image: url(img/icon-phone.svg) no-repeat;
 }
 .contacts-header p {
     font-size: 14px;
     line-height: 24px;
-    color: var(--black);
+    color: var(--text-main);
 }
 
-.login-header a {color: var(--black);}
+.login-header a {
+    color: var(--text-main);
+}
 
 .header-main nav {
-    background-color: var(--dark-blue-nav);
+    background-color: var(--secondary);
     box-shadow: inset 0px -5px 0px #293449;
 }
-.footer-main li {list-style: none;}
+.footer-main li {
+    list-style: none;
+}
+
 .footer-top {
-    background-color: var(--dark-blue-nav);
-    color: var(--white);
+    background-color: var(--secondary);
+    color: var(--text-header);
     font-size: 18px;
     line-height: 24px;
 }
 .footer-bottom {
-    background-color: var(--dark-blue);
-    color: var(--white);
+    background-color: var(--primary);
+    color: var(--text-header);
     font-size: 16px;
     line-height: 18px;
 }
 .footer-bottom a {
-    color: var(--orange-link);
+    color: var(--promo-1-link);
 }
 .footer-nav a {
-    color: var(--white);
+    color: var(--text-header);
 }
 /* пытаюсь закрасить последние 4 ссылки золотым */
 .footer-nav a:nth-of-type(n+5) {
-    color: var(--orange-link);
+    color: var(--promo-1-link);
 }
 .social {
     text-align: center;
 }
-/* пытаюсь задать иконки и фон, но не рабьотает */
-.social-btn {
-    background-color: var(--blue-social);
-    width: 42px;
-    height: 42px;
-    border-radius: 50%;
-}
-.social-vk {
-    background-image: url(img/icon-vk.svg) no-repeat;
-    background-position: center;
-}
-
-.social-fb {
-    background-image: url(img/icon-fb.svg) no-repeat;
-    background-position: center;
-}
-
-.social-fb {
-    background-image: url(img/icon-insta.svg) no-repeat;
-    background-position: center;
-}
 
 .logo-top {
-    background-color: var(--red);
+    background-color: var(--button);
     box-shadow: inset 0px -5px 0px rgba(0, 0, 0, 0.24);
     padding-top: 12px;
     padding-bottom: 17px;
@@ -144,13 +133,17 @@ a {text-decoration: none;}
 }
 
 .logo-bottom {
-    background-color: var(--red);
+    background-color: var(--button);
     box-shadow: inset 0px -5px 0px rgba(0, 0, 0, 0.24);
     padding-top: 20px;
     padding-bottom: 25px;
     padding-left: 41px;
     padding-right: 41px;
 }
-.map-popup {display: none;}
-.form-popup {display: none;}
+.map-popup {
+    display: none;
+}
+.form-popup {
+    display: none;
+}
 
