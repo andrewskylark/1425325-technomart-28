@@ -4,7 +4,8 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link href="https://fonts.googleapis.com/css2?family=Cuprum:ital,wght@0,400;0,700;1,400&family=PT+Sans&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cuprum:ital,wght@0,400;0,700;1,400&family=PT+Sans&display=swap"
+    rel="stylesheet">
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/style.css">
   <title>HTML Academy: Техномарт</title>
@@ -13,42 +14,46 @@
 <body>
   <header class="header-main">
     <div class="header-top">
-      
-        <a class="logo-top" aria-label="Техномарт"> <img src="img/logo-technomart.svg" width="107" height="17" alt="Техномарт лого"> </a>
 
-        <form action="https://echo.htmlacademy.ru/" method="get">
-          <label  class="visually-hidden" for="search">Поиск</label>
-          <input type="search" name="search" id="search" placeholder="Поиск:"> 
-          <button type="submit" class="visually-hidden">Отправить</button>
-        </form>
-        <ul>
-          <li> <a href="blank.html">Закладки:</a> </li>
-          <li> <a href="blank.html">Корзина:</a> </li>
-          <li> <a href="blank.html">Оформить заказ</a> </li>
-       </ul>
+      <a class="logo-top" aria-label="Техномарт"> <img src="img/logo-technomart.svg" width="107" height="17"
+          alt="Техномарт лого"> </a>
+
+      <form action="https://echo.htmlacademy.ru/" method="get">
+        <label class="visually-hidden" for="search">Поиск</label>
+        <input type="search" name="search" id="search" placeholder="Поиск:">
+        <button type="submit" class="visually-hidden">Отправить</button>
+      </form>
+
+      <ul class="header-purchase">
+        <li> <a class="bookmarks" href="blank.html">Закладки:</a> </li>
+        <li> <a class="basket" href="blank.html">Корзина:</a> </li>
+        <li> <a class="purchase" href="blank.html">Оформить заказ</a> </li>
+      </ul>
+    </div>
+
+    <div class="header-middle">
+
+      <h1>Интернет-магазин строительных материалов и инструментов для ремонта
+      </h1>
+
+      <div class="header-contacts">
+        <a href="telto:+78125550555">+7 (812) 555-05-55</a>
+        <p>г. Санкт-Петербург ул. Б. Конюшенная, д. 19/8</p>
       </div>
-    
-    
-    <h1>Интернет-магазин строительных материалов и инструментов для ремонта
-    </h1>
 
-    <div class="contacts-header">
-      <a href="telto:+78125550555">+7 (812) 555-05-55</a>
-      <p>г. Санкт-Петербург ул. Б. Конюшенная, д. 19/8</p>
-    </div>
-    <div class="login-header">
-     <ul>
-       <li> <a href="blank.html">Войти</a> </li>
-       <li> <a href="blank.html">Регистрация</a> </li>
-     </ul>
+      <ul class="header-login">
+        <li> <a href="blank.html">Войти</a> </li>
+        <li> <a href="blank.html">Регистрация</a> </li>
+      </ul>
+
     </div>
 
-   
-    <nav>
-      <ul>
+
+    <nav class="main-nav">
+      <ul class="site-navigation">
         <li> <a href="#">Главная</a> </li>
         <li> <a href="blank.html">Компания</a> </li>
-        <li> <a href="blank.html">Каталог</a> </li>
+        <li> <a href="catalog.html">Каталог</a> </li>
         <li> <a href="blank.html">Новости</a> </li>
         <li> <a href="blank.html">Спецпредложения</a> </li>
         <li> <a href="blank.html">Доставка</a> </li>
@@ -114,7 +119,7 @@
           <ul>
             <li> <a href="blank.html"> Купить </a> </li>
             <li> <a href="blank.html"> В закладки </a> </li>
-         </ul>
+          </ul>
         </li>
         <li>
           <img src="img/bfg3000.jpg" width="127" height="112" alt="Bosch BFG 3000">
@@ -126,7 +131,7 @@
           <ul>
             <li> <a href="blank.html"> Купить </a> </li>
             <li> <a href="blank.html"> В закладки </a> </li>
-         </ul>
+          </ul>
         </li>
         <li>
           <img src="img/bfg6000.jpg" width="144" height="128" alt="Bosch BFG 6000">
@@ -138,7 +143,7 @@
           <ul>
             <li> <a href="blank.html"> Купить </a> </li>
             <li> <a href="blank.html"> В закладки </a> </li>
-         </ul>
+          </ul>
         </li>
         <li>
           <img src="img/bfg2000.jpg" width="127" height="112" alt="Bosch BFG 2000">
@@ -149,7 +154,7 @@
           <ul>
             <li> <a href="blank.html"> Купить </a> </li>
             <li> <a href="blank.html"> В закладки </a> </li>
-         </ul>
+          </ul>
         </li>
       </ul>
     </section>
@@ -248,46 +253,47 @@
 
   <footer class="footer-main">
     <div class=footer-top>
-      
-        <a class="logo-bottom" href="#" aria-label="Техномарт"> <img src="img/logo-technomart.svg" width="137" height="22" alt="Техномарт лого"> </a>
+      <div class="footer-contacts">
+        <a class="logo-bottom" href="#" aria-label="Техномарт"> <img src="img/logo-technomart.svg" width="137"
+            height="22" alt="Техномарт лого"> </a>
         <p> г. Санкт-Петербург ул. Б. Конюшенная, д. 19/8
-         +7 (812) 555-05-55
+          +7 (812) 555-05-55
         </p>
-        <div class="footer-nav">
-          <ul>
-            <li> <a href="blank.html">Компания</a> </li>
-            <li> <a href="blank.html">Новости</a> </li>
-            <li> <a href="catalog.html">Каталог</a> </li>
-            <li> <a href="blank.html">Доставка</a> </li>
-            <li> <a href="blank.html">Материалы</a> </li>
-            <li> <a href="blank.html">Техника</a> </li>
-            <li> <a href="blank.html">Инструмент</a> </li>
-            <li> <a href="blank.html">Спецпредложения</a> </li>
-          </ul>
-         
       </div>
+
+      <ul class="footer-nav">
+        <li> <a href="blank.html">Компания</a> </li>
+        <li> <a href="blank.html">Новости</a> </li>
+        <li> <a href="catalog.html">Каталог</a> </li>
+        <li> <a href="blank.html">Доставка</a> </li>
+        <li> <a href="blank.html">Материалы</a> </li>
+        <li> <a href="blank.html">Техника</a> </li>
+        <li> <a href="blank.html">Инструмент</a> </li>
+        <li> <a href="blank.html">Спецпредложения</a> </li>
+      </ul>
     </div>
+
     <div class=footer-bottom>
-      
-        <p>© 2010–2019 Компания «Техномарт»<br>
-            Все права защищены</p>
-      
-        <ul>
-          <li> <a class="social-btn social-vk" href="blank.html" aria-label="Вконтакте"></a>1 </li>
-          <li> <a class="social-btn social-fb" href="blank.html" aria-label="Фейсбук"></a> 2</li>
-          <li> <a class="social-btn social-ig" href="blank.html" aria-label="Инстаграмм"></a>3 </li>
-        </ul>
-      
 
-        <p class="footer-feedback">обратная связь: <br>
-          <a href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a>
-        </p>
+      <p>© 2010–2019 Компания «Техномарт»<br>
+          Все права защищены</p>
 
-        <p class="footer-developer">Разработано — <br>
-          <a href="https://htmlacademy.ru/intensive/htmlcss"> htmlacademy.ru</a>
-        </p>
-      </div>
-     
+      <ul class="social">
+        <li> <a class="social-btn social-vk" href="blank.html" aria-label="Вконтакте"></a>1 </li>
+        <li> <a class="social-btn social-fb" href="blank.html" aria-label="Фейсбук"></a> 2</li>
+        <li> <a class="social-btn social-ig" href="blank.html" aria-label="Инстаграмм"></a>3 </li>
+      </ul>
+
+
+      <p class="footer-feedback">обратная связь: <br>
+        <a href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a>
+      </p>
+
+      <p class="footer-developer">Разработано — <br>
+        <a href="https://htmlacademy.ru/intensive/htmlcss"> htmlacademy.ru</a>
+      </p>
+    </div>
+
   </footer>
 
   <section class="form-popup">

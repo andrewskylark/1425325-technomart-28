@@ -1,26 +1,11 @@
-:root {
-    --text-header: #FFFFFF;
-    --text-main: #000000;
-    --primary: #293449;
-    --secondary: #32425C;
-    --social-btn: #212A3A;
-    --accent: #F1F5F7;
-    --purchase: #63A63E;
-    --button: #EE3643;
-    --promo-1: #FFBF47;
-    --promo-2: #3BBCE3;
-    --promo-3: #DC91D8;
-    --promo-4: #8ED78F;
-    --promo-5: #FFC047;
-    --link-secondary: #FFD180;
+/* global */
+*, *::before,
+*::after {
+  box-sizing: border-box;
 }
-*, *::before, *::after (box-sizing: border-box;)
 
-body {
-    min-width: 960px;
-    margin: 0;
-    padding: 0;
-    font-family: "Cuprum", sans-serif;
+html {
+  height: 100%;
 }
 
 img {
@@ -28,7 +13,20 @@ img {
     height: auto;
 }
 
-a {text-decoration: none;}
+a {
+  text-decoration: none;
+}
+
+body {
+  min-width: 960px;
+  min-height: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: "Cuprum", "Tahoma", sans-serif;
+  display: grid;
+  grid-template-rows: min-content 1fr min-content;
+  align-content: start;
+}
 
 .visually-hidden {
     position: absolute;
@@ -40,110 +38,171 @@ a {text-decoration: none;}
     padding: 0px;
     overflow: hidden;
 }
+
 .wrapper {
-    width: 960px;
+    width: 940px;
     margin: 0 auto;
+    padding: 0 10px;
 }
+
+:root {
+  --text-header: #FFFFFF;
+  --text-main: #000000;
+  --primary: #293449;
+  --secondary: #32425C;
+  --social-btn: #212A3A;
+  --accent: #F1F5F7;
+  --purchase: #63A63E;
+  --button: #EE3643;
+  --promo-delivery: #FFBF47;
+  --promo-tools: #3BBCE3;
+  --promo-vehicle: #DC91D8;
+  --promo-discount: #8ED78F;
+  --link-secondary: #FFD180;
+}
+/* header */
 .header-main {
     font-size: 18px;
     line-height: 24px;
     background-color: var(--accent);
 }
 
-.header-main  li {
-    list-style: none;
+.header-main a {
+  color: var(--text-header);
 }
-
-.header-main a { 
-    color: var(--text-header);
+.header-main  li {
+  list-style: none;
 }
 
 .header-top {
-    background-color: var(--primary);
-    color: var(--text-header);
+  background-color: var(--primary);
+  color: var(--text-header);
+  display: flex;
+  height: 42px;
+  justify-content: center;
 }
+.header-purchase {
+  display: flex;
+  flex-direction: row;
 
+}
 .header-main h1 {
-    font-style: italic;    
+    display: block;
+    height: 171px;
+    width: 197px;
+    font-style: italic;
     font-size: 16px;
     line-height: 23px;
     color: var(--button);
 }
-.contacts-header {
+.header-contacts {
     text-align: center;
 }
-.contacts-header a {
+.header-contacts a {
     font-weight: bold;
     font-size: 21px;
     line-height: 30px;
     color: var(--button);
     background-image: url(img/icon-phone.svg) no-repeat;
 }
-.contacts-header p {
+.header-contacts p {
     font-size: 14px;
     line-height: 24px;
     color: var(--text-main);
 }
 
-.login-header a {
-    color: var(--text-main);
+.header-login a {
+  color: var(--text-main);
+}
+.header-middle {
+  display: flex;
+  justify-content: space-around;
+}
+.header-main nav {
+  box-shadow: inset 0px -5px 0px #293449;
+  background-color: var(--secondary);
+}
+.site-navigation {
+  flex-direction: row;
+  justify-content: center;
+  height: 60px;
+  display: flex;
 }
 
-.header-main nav {
-    background-color: var(--secondary);
-    box-shadow: inset 0px -5px 0px #293449;
-}
+/* footer */
+
 .footer-main li {
-    list-style: none;
+  list-style: none;
 }
 
 .footer-top {
-    background-color: var(--secondary);
-    color: var(--text-header);
-    font-size: 18px;
-    line-height: 24px;
+  height: 193px;
+  color: var(--text-header);
+  font-size: 18px;
+  line-height: 24px;
+  display: flex;
+  justify-content: space-between;
+  background-color: var(--secondary);
 }
-.footer-bottom {
-    background-color: var(--primary);
-    color: var(--text-header);
-    font-size: 16px;
-    line-height: 18px;
-}
-.footer-bottom a {
-    color: var(--promo-1-link);
-}
+
 .footer-nav a {
-    color: var(--text-header);
+  color: var(--text-header);
 }
 /* пытаюсь закрасить последние 4 ссылки золотым */
 .footer-nav a:nth-of-type(n+5) {
-    color: var(--promo-1-link);
+  color: var(--link-secondary);
 }
+
+.footer-bottom {
+  background-color: var(--primary);
+  color: var(--text-header);
+  font-size: 16px;
+  line-height: 18px;
+  display: flex;
+  justify-content: space-between;
+  align-content: items;
+  height: 107px;
+}
+.footer-bottom a {
+    color: var(--link-secondary);
+}
+
+.footer-nav {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: end;
+  height: 37px;
+  width: 171;
+}
+
+
 .social {
-    text-align: center;
+  flex-direction: row;
+  justify-content: center;
+  display: flex;
 }
 
 .logo-top {
-    background-color: var(--button);
-    box-shadow: inset 0px -5px 0px rgba(0, 0, 0, 0.24);
-    padding-top: 12px;
-    padding-bottom: 17px;
-    padding-left: 55px;
-    padding-right: 57px;
+  box-shadow: inset 0px -5px 0px rgba(0, 0, 0, 0.24);
+  padding-top: 12px;
+  padding-bottom: 17px;
+  padding-left: 55px;
+  padding-right: 57px;
+  background-color: var(--button);
 }
 
 .logo-bottom {
-    background-color: var(--button);
-    box-shadow: inset 0px -5px 0px rgba(0, 0, 0, 0.24);
-    padding-top: 20px;
-    padding-bottom: 25px;
-    padding-left: 41px;
-    padding-right: 41px;
+  box-shadow: inset 0px -5px 0px rgba(0, 0, 0, 0.24);
+  padding-top: 20px;
+  padding-bottom: 25px;
+  padding-left: 41px;
+  padding-right: 41px;
+  background-color: var(--button);
 }
 .map-popup {
-    display: none;
+  display: none;
 }
 .form-popup {
-    display: none;
+  display: none;
 }
 
