@@ -14,24 +14,27 @@
 <body>
   <header class="header-main">
     <div class="header-top">
+      <div class="wrapper">
 
-      <a class="logo-top" aria-label="Техномарт"> <img src="img/logo-technomart.svg" width="107" height="17"
-          alt="Техномарт лого"> </a>
+        <a class="logo-header" aria-label="Техномарт"> <img src="img/logo-technomart.svg" width="107" height="17"
+            alt="Техномарт лого"> </a>
 
-      <form action="https://echo.htmlacademy.ru/" method="get">
-        <label class="visually-hidden" for="search">Поиск</label>
-        <input type="search" name="search" id="search" placeholder="Поиск:">
-        <button type="submit" class="visually-hidden">Отправить</button>
-      </form>
+        <form class="header-search" action="https://echo.htmlacademy.ru/" method="get">
+          <label class="visually-hidden" for="search">Поиск</label>
+          <input class="input-search" type="search" name="search" id="search" placeholder="Поиск:">
+          <button type="submit" class="visually-hidden">Отправить</button>
+        </form>
 
-      <ul class="header-purchase">
-        <li> <a class="bookmarks" href="blank.html">Закладки:</a> </li>
-        <li> <a class="basket" href="blank.html">Корзина:</a> </li>
-        <li> <a class="purchase" href="blank.html">Оформить заказ</a> </li>
-      </ul>
+        <ul class="header-purchase">
+          <li> <a class="bookmarks-btn" href="blank.html">Закладки:</a> </li>
+          <li> <a class="basket-btn" href="blank.html">Корзина:</a> </li>
+          <li> <a class="purchase-btn" href="blank.html">Оформить заказ</a> </li>
+        </ul>
+      </div>
     </div>
 
     <div class="header-middle">
+      <div class="wrapper">
 
       <h1>Интернет-магазин строительных материалов и инструментов для ремонта
       </h1>
@@ -42,14 +45,15 @@
       </div>
 
       <ul class="header-login">
-        <li> <a href="blank.html">Войти</a> </li>
-        <li> <a href="blank.html">Регистрация</a> </li>
+        <li> <a class="login-btn" href="blank.html">Войти</a> </li>
+        <li> <a class="register-btn" href="blank.html">Регистрация</a> </li>
       </ul>
+      </div>
 
     </div>
 
 
-    <nav class="main-nav">
+    <nav class="main-nav wrapper">
       <ul class="site-navigation">
         <li> <a href="#">Главная</a> </li>
         <li> <a href="blank.html">Компания</a> </li>
@@ -66,24 +70,24 @@
     <section>
       <h2 class="visually-hidden">Промо-блок</h2>
 
-      <ul>
-        <li>
+      <ul class="promo-block">
+        <li class="promo materials">
           <h3>Материалы</h3>
           <a href="blank.html">На любой вкус</a>
         </li>
-        <li>
+        <li class="promo tools">
           <h3>Инструмент</h3>
           <a href="blank.html">На все случаи</a>
         </li>
-        <li>
+        <li class="promo vehicles">
           <h3>Техника</h3>
           <a href="blank.html">для стройки</a>
         </li>
-        <li>
+        <li class="promo discounts">
           <h3>Скидки</h3>
           <a href="blank.html">На 350 товаров</a>
         </li>
-        <li>
+        <li class="promo delivery">
           <h3>Доставка</h3>
           <a href="blank.html">Бесплатно</a>
         </li>
