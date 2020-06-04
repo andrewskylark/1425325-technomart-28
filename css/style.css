@@ -519,7 +519,7 @@ grid-template-rows: 1fr 1fr 1fr;
 .transporting {
   font-size: 18px;
   line-height: 24px;
-  list-style-image: url('//img/list-style.png');
+  list-style-image: url(//img/list-style.png);
 }
 
 /* catalog*/
