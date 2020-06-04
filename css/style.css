@@ -112,6 +112,7 @@ body {
   background-color: var(--button-active);
 }
 .header-search {
+  position: relative;
   flex-grow: 1;
 }
 .header-search .input-search {
@@ -121,6 +122,15 @@ body {
   background-color: transparent;
   width: 100%;
   border: none;
+}
+.input-search:before {
+  content: "";
+  width: 11px;
+  height: 11px;
+  position: absolute;
+  background-image: url("../img/icon-search.svg");
+  background-position: 0 0;
+  background-repeat: no-repeat;
 }
 .input-search:focus {
   background-color: var(--text-header);
@@ -255,6 +265,10 @@ body {
 }
 .site-navigation a {
   display: block;
+  padding-top: 16px;
+  padding-bottom: 20px;
+  padding-left: 27px;
+  padding-right: 24px;
 }
 .site-navigation a:active {
   opacity: 0.6;
@@ -402,7 +416,7 @@ grid-template-rows: 1fr 1fr 1fr;
   width: 620px;
   height: 266px;
   background-color: var(--primary);
-  background-image: url(img/perforators.jpg);
+  background-image: url(/img/perforators.jpg);
 }
 .button-main {
   color: var(--text-header);
@@ -519,7 +533,7 @@ grid-template-rows: 1fr 1fr 1fr;
 .transporting {
   font-size: 18px;
   line-height: 24px;
-  list-style-image: url(//img/list-style.png);
+  list-style-image: url(/img/list-style.png);
 }
 
 /* catalog*/
@@ -854,7 +868,7 @@ grid-template-rows: 1fr 1fr 1fr;
   height: 100%;
 }
 .social-vk {
-  background-image: url(img/icon-vk.svg);
+  background-image: url(/img/icon-vk.svg);
   background-position: center;
 }
 .footer-bottom a {
