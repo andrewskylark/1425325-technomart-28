@@ -76,44 +76,85 @@
   <main>
     <div class="wrapper catalog-grid">
       <ul class="breadcrumps">
-        <li> <a class="breadcrumps-link" href="index.html">Главная</a></li>
-        <li> <a class="breadcrumps-link" href="catalog.html">Каталог</a></li>
-        <li> <a class="breadcrumps-link" href="blank.html">Инструмент</a></li>
+        <li> <a class="breadcrumps-link" href="index.html" aria-label="главная страница"></a>
+        </li>
+        <li> <a class="breadcrumps-link" href="catalog.html">Каталог</a>
+        </li>
+        <li> <a class="breadcrumps-link" href="blank.html">Инструмент</a>
+        </li>
         <li> <a> Перфораторы </a> </li>
       </ul>
       <h2 class="page-title">Перфораторы</h2>
 
-      <section class="filters">
-        <h3 class="filter-title"> Фильтр </h3>
+      <section class="filters-all">
+        <h3 class="filter-title"> Фильтр: </h3>
         <form class="filter" action="https://echo.htmlacademy.ru/" method="get">
           <fieldset>
             <legend> Цена: </legend>
-            <input type="range" id="filter-price" name="filter-price" min="0" max="40000" step="1">
-            <output name="priceoutput" for="filter-price"></output>
+            <div class="range-filter">
+              <div class="range-controls">
+                <div class="scale">
+                  <div class="bar"> </div>
+                </div>
+                <div class="toggle toggle-min" tabindex="0"></div>
+                <div class="toggle toggle-max" tabindex="0"></div>
+              </div>
+              <div class="price-controls">
+                <label class="min-price">
+                  <input type="number" name="min-price" value="0" step="100">
+                </label>
+                <p> - </p>
+                <label class="max-price">
+                  <input type="number" name="max-price" value="30000" step="100">
+                </label>
+              </div>
+            </div>
+
           </fieldset>
           <fieldset>
             <legend> Производители: </legend>
             <ul>
-              <li class="filter-option filter-checkbox"> <label> <input type="checkbox" name="brand" value="Interskol">
-                  Интерскол </label> </li>
-              <li class="filter-option filter-checkbox"> <label> <input type="checkbox" name="brand" value="Makita"
-                    checked> Makita </label> </li>
-              <li class="filter-option filter-checkbox"> <label> <input type="checkbox" name="brand" value="Dewalt">
-                  Dewalt </label> </li>
-              <li class="filter-option filter-checkbox"> <label> <input type="checkbox" name="brand" value="Hitachi">
-                  Hitachi </label> </li>
-              <li class="filter-option filter-checkbox"> <label> <input type="checkbox" name="brand" value="Bosch"
-                    checked> Bosch </label> </li>
+              <li class="filter-option filter-checkbox">
+                <input class="visually-hidden filter-input-checkbox" type="checkbox" name="brand" id="Bosch"
+                  value="Bosch" checked>
+                <label for="Bosch"> Bosch </label>
+              </li>
+              <li class="filter-option filter-checkbox">
+                <input class="visually-hidden filter-input-checkbox" type="checkbox" name="brand" id="Interskol"
+                  value="Interskol">
+                <label for="Interskol"> Интерскол </label>
+              </li>
+              <li class="filter-option filter-checkbox">
+                <input class="visually-hidden filter-input-checkbox" type="checkbox" name="brand" id="Makita"
+                  value="Makita" checked>
+                <label for="Makita"> Makita </label>
+              </li>
+              <li class="filter-option filter-checkbox">
+                <input class="visually-hidden filter-input-checkbox" type="checkbox" name="brand" id="Dewalt"
+                  value="Dewalt">
+                <label for="Dewalt"> Dewalt </label>
+              </li>
+              <li class="filter-option filter-checkbox">
+                <input class="visually-hidden filter-input-checkbox" type="checkbox" name="brand" id="Hitachi"
+                  value="Hitachi">
+                <label for="Hitachi"> Hitachi </label>
+              </li>
+
             </ul>
           </fieldset>
           <fieldset>
             <legend> Питание: </legend>
             <ul>
-              <li class="filter-option filter-radio"> <label> <input type="radio" name="power-source" value="battery"
-                    checked> Аккумуляторные </label> </li>
-              <li class="filter-option filter-radio"> <label> <input type="radio" name="power-source"
-                    value="power-plug">
-                  Сетевые </label> </li>
+              <li class="filter-option filter-radio">
+                <input class="visually-hidden filter-input-radio" type="radio" name="power-source" id="battery"
+                  value="battery" checked>
+                <label for="battery"> Аккумуляторные </label>
+              </li>
+              <li class="filter-option filter-radio">
+                <input class="visually-hidden filter-input-radio" type="radio" name="power-source" id="power-socket"
+                  value="power-socket">
+                <label for="power-socket"> Сетевые </label>
+              </li>
             </ul>
           </fieldset>
           <button type="submit" class="filter-button"> Показать </button>
@@ -122,7 +163,7 @@
 
       <section class="catalog">
         <div class="sorter-section">
-          <p class="sorter-header">Сортировка</p>
+          <p class="sorter-header">Сортировка:</p>
           <ul class="sorter-list">
             <li>
               <a>По цене</a>
@@ -134,10 +175,10 @@
               <a href="blank.html">По функционалу</a>
             </li>
             <li>
-              <a href="blank.html"></a>
+              <a class="sorter-up" href="blank.html"></a>
             </li>
             <li>
-              <a href="blank.html"></a>
+              <a class="sorter-down" href="blank.html"></a>
             </li>
           </ul>
         </div>

@@ -4,7 +4,8 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link href="https://fonts.googleapis.com/css2?family=Cuprum:ital,wght@0,400;0,700;1,400&family=PT+Sans:wght@400;700&display=swap"
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cuprum:ital,wght@0,400;0,700;1,400&family=PT+Sans:wght@400;700&display=swap"
     rel="stylesheet">
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/style.css">
@@ -69,7 +70,7 @@
   <main>
     <section class="wrapper promo-block">
 
-     <h2 class="visually-hidden">Промо-блок</h2>
+      <h2 class="visually-hidden">Промо-блок</h2>
 
       <ul class="promo-list">
         <li class="promo new-item materials">
@@ -95,16 +96,27 @@
       </ul>
 
       <ul class="promo-slider">
-        <li class="slider slider-perforators">
+        <li class="slide slide-perforators slide-current">
           <h3>Перфораторы</h3>
           <p>Настоящие мужские игрушки</p>
           <a class="button-main" href="catalog.html">Открыт каталог</a>
         </li>
-        <li class="visually-hidden slider slider-drills">
+        <li class="slide slide-drills">
           <h3>Дрели</h3>
           <p>Соседям на радость!</p>
           <a class="button-main" href="catalog.html">Открыт каталог</a>
         </li>
+
+        <div class="slider-arrows">
+          <button class="slider-arrow-left" type="button" aria-label="слайд перфораторы"></button>
+          <button class="slider-arrow-right" type="button" aria-label="слайд дрели"></button>
+        </div>
+
+        <div class="slider-buttons">
+          <button type="button" class="button-current" aria-label="слайд перфораторы"></button>
+          <button type="button" aria-label="слайд дрели"></button>
+        </div>
+
       </ul>
 
     </section>
@@ -156,7 +168,7 @@
           <a href="blank.html">
             <h3>Перфоратор BOSCH <br> BFG 2000</h3>
           </a>
-          <p  class="current-price"> 12500 P.</p>
+          <p class="current-price"> 12500 P.</p>
           <ul class="item-purchase">
             <li> <a class="item-purchase-btn" href="blank.html"> Купить </a> </li>
             <li> <a class="item-bookmark-btn" href="blank.html"> В закладки </a> </li>
@@ -208,69 +220,83 @@
 
     <div class="background-accent">
 
-    <section class="services wrapper">
-      <!-- Здесь будет слайдер -->
-      <h2>Сервисы</h2>
-      <p>Хороший интернет-магазин отличается от плохого не только ценами!
-        Мы стараемся изо всех сил, чтобы сделать ваши покупки приятными.
-      </p>
-      <ul>
-        <li>
-          <h3>Доставка</h3>
-          <p> Мы с удовольствием доставим ваш товар прямо
-            к вашему подъезду совершенно бесплатно!
-            Ведь мы неплохо заработаем,
-            поднимая его на ваш этаж!
-          </p>
-        </li>
-        <li>
-          <h3>Гарантия</h3>
-          <p> Если купленный у нас товар поломается или заискрит,
-             а также в случае пожара, спровоцированного
-            его возгоранием, вы всегда можете быть уверены в нашей
-            гарантии. Мы обменяем сгоревший товар на новый.
-             Дом уж восстановите как-нибудь сами.</p>
-        </li>
-        <li>
-          <h3>Кредит</h3>
-          <p> Залезть в долговую яму стало проще! 
-            Кредитные консультанты придут вам на помощь.
-          </p>
-          <a class="button-main" href="blank.html">Открыть заявку</a>
-        </li>
-      </ul>
-    </section>
+      <section class="services wrapper">
+        <h2>Сервисы</h2>
+        <p>Хороший интернет-магазин отличается от плохого не только ценами!
+          Мы стараемся изо всех сил, чтобы сделать ваши покупки приятными.
+        </p>
+
+        <div class="slider-flex">
+          <ul class="services-buttons">
+            <li>
+              <button type="button" class="button-current">Доставка</button>
+            </li>
+            <li>
+              <button type="button">Гарантия</button>
+            </li>
+            <li>
+              <button type="button">Кредит</button>
+            </li>
+          </ul>
+          <ul class="services-slider">
+            <li class="services-slide slide-delivery current">
+              <h3>Доставка</h3>
+              <p> Мы с удовольствием доставим ваш товар прямо
+                к вашему подъезду совершенно бесплатно!
+                Ведь мы неплохо заработаем, <br>
+                поднимая его на ваш этаж!
+              </p>
+            </li>
+            <li class="services-slide slide-warranty">
+              <h3>Гарантия</h3>
+              <p> Если купленный у нас товар поломается или заискрит,
+                 а также в случае пожара, спровоцированного
+                его возгоранием, вы всегда можете быть уверены в нашей
+                гарантии. Мы обменяем сгоревший товар на новый.
+                 Дом уж восстановите как-нибудь сами.</p>
+            </li>
+            <li class="services-slide slide-loan">
+              <h3>Кредит</h3>
+              <p> Залезть в долговую яму стало проще! 
+                Кредитные консультанты придут вам на помощь.
+              </p>
+              <a class="button-main" href="blank.html">Открыть заявку</a>
+            </li>
+
+          </ul>
+        </div>
+      </section>
     </div>
 
     <div class="flex-section wrapper">
 
-    <section class="about-company">
-      <h2>Компания "Техномарт"</h2>
-      <p>Настоящий мужской шоппинг начинается здесь! Огромный выбор товаров для
-        ремонта и строительства не оставит равнодушными любителей сэкономить на
-        гастарбайтерах.
-      </p>
-      <p>Мы можем доставить ваш товар в самые отдаленные точки России!
-        Техномарт работает со многими транспортными компаниями:
-      </p>
-      <ul class="transporting">
-        <li>Деловые линии</li>
-        <li>Автотрейдинг</li>
-        <li>ЖелДорЭкспедиция</li>
-      </ul>
-      <a  class="button-main" href="blank.html">Подробнее о компании</a>
-    </section>
+      <section class="about-company">
+        <h2>Компания "Техномарт"</h2>
+        <p>Настоящий мужской шоппинг начинается здесь! Огромный выбор товаров для
+          ремонта и строительства не оставит равнодушными любителей сэкономить на
+          гастарбайтерах.
+        </p>
+        <p>Мы можем доставить ваш товар в самые отдаленные точки России!
+          Техномарт работает со многими транспортными компаниями:
+        </p>
+        <ul class="transporting">
+          <li>Деловые линии</li>
+          <li>Автотрейдинг</li>
+          <li>ЖелДорЭкспедиция</li>
+        </ul>
+        <a class="button-main" href="blank.html">Подробнее о компании</a>
+      </section>
 
-    <section class="contacts">
-      <h2>Контакты</h2>
-      <p>Вы можете забрать товар сами, <br>
-        заехав в наш офис:</p>
-      <a href="blank.html">
-        <img src="img/map-small.png" width="300" height="158" alt="карта проезда">
-      </a>
-      <a class="button-main" href="blank.html">Заблудились? Напишите нам!</a>
-    </section>
-  </div>
+      <section class="contacts">
+        <h2>Контакты</h2>
+        <p>Вы можете забрать товар сами, <br>
+          заехав в наш офис:</p>
+        <a href="blank.html">
+          <img src="img/map-small.png" width="300" height="158" alt="карта проезда">
+        </a>
+        <a class="button-main" href="blank.html">Заблудились? Напишите нам!</a>
+      </section>
+    </div>
   </main>
 
   <footer class="footer-main">

@@ -28,6 +28,10 @@
   --breadcrumps-btn-hover: #c5c5c5;
   --user-btn-active: #161D29;
   --nav-active: #1D2739;
+  --filters: #F7F3EC;
+  --range-scale: #D7DCDE;
+  --toggle: #ABABAB;
+  --checkbox: #b5b5b5;
 }
 
 html {
@@ -149,10 +153,15 @@ body {
   background-image: url("../img/icon-search-focus.svg");
   background-position: 0 0;
   background-repeat: no-repeat;
+  z-index: 10;
 }
 
 .input-search:focus {
   background-color: var(--text-header);
+}
+.input-search::placeholder {
+  color: var(--text-header);
+  opacity: 1;
 }
 
 .header-purchase {
@@ -515,8 +524,11 @@ body {
   background-repeat: no-repeat;
   background-position: 85% 50%;
 }
-
+/*  Промо Слайдер*/
 .promo-slider {
+  width: 620px;
+  height: 266px;
+  position: relative;
   grid-row: 2 / 4;
   grid-column: 1 / 3;
   list-style: none;
@@ -546,26 +558,83 @@ body {
   font-size: 18px;
   line-height: 24px;
 }
-.slider {
+.slide {
   padding-top: 23px;
   padding-left: 24px;
   width: 620px;
   height: 266px;
   background-color: var(--primary);
 }
-.slider .button-main {
+.slide {
+  display: none;
+}
+
+.slide-current {
+  display: block;
+}
+.slide .button-main {
   margin-top: 112px;
 }
-.slider-perforators {
+.slide-perforators {
   background-image: url(../img/perforators.jpg);
 }
-.slider-drills {
+.slide-drills {
   background-image: url(../img/drills.jpg);
 }
+.slider-buttons {
+  position: absolute;
+  left: 48%;
+  bottom: 49px;
+}
+.slider-buttons button {
+  padding: 0;
+  width: 10px;
+  height: 10px;
+  background-color: var(--button);
+  border: 2px solid var(--text-header);
+  border-radius: 50%;
+  cursor: pointer;
+}
+.slider-buttons .button-current {
+  background-color: var(--text-header);
+}
+.slider-buttons button:first-child {
+  margin-right: 5px;
+}
+
+.slider-arrows {
+  position: absolute;
+  top: 125px;
+  left: 30px;
+}
+.slider-arrow-left {
+  transform: rotate(45deg);
+  margin-right: 492px;
+}
+
+.slider-arrow-right {
+  transform: rotate(-135deg);
+}
+.slider-arrows button {
+  padding: 0;
+  width: 34px;
+  height: 34px;
+  background-color: transparent;
+  cursor: pointer;
+  border: none;
+  border-left: 3px solid var(--text-header);
+  border-bottom: 3px solid var(--text-header);
+}
+
 .button-main {
   display: inline-block;
   color: var(--text-header);
   background-color: var(--button);
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 18px;
   min-width: 192px;
   padding-top: 10px;
   padding-bottom: 10px;
@@ -631,13 +700,23 @@ body {
   opacity: 0.5;
 }
 /* Сервисы */
+.services {
+  padding-top: 64px;
+}
 .services h2,
 .services h3 {
   padding: 0;
   margin: 0;
   font-size: 30px;
   line-height: 30px;
+  font-weight: normal;
   text-transform: uppercase;
+}
+.services h2 {
+  margin-bottom: 25px;
+}
+.services h3 {
+  margin-bottom: 30px;
 }
 .services ul {
   padding: 0;
@@ -648,6 +727,7 @@ body {
   color: var(--secondary);
 }
 .services p {
+  display: block;
   margin: 0;
   padding: 0;
   font-size: 13px;
@@ -657,6 +737,88 @@ body {
 .background-accent {
   background-color: var(--accent);
 }
+.services p {
+  width: 410px;
+  margin-bottom: 70px;
+}
+.slider-flex {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+.services-slide {
+  width: 619px;
+  min-height: 283px;
+}
+.slide-delivery p {
+  width: 275px;
+}
+.slide-delivery {
+  background-image: url(../img/img-delivery.png);
+  background-repeat: no-repeat;
+  background-position: top right;
+}
+.slide-warranty p {
+  width: 313px;
+}
+.slide-warranty {
+  background-image: url(../img/img-warranty.png);
+  background-repeat: no-repeat;
+  background-position: top right;
+}
+
+.slide-loan p {
+  width: 313px;
+  margin-bottom: 30px;
+}
+.slide-loan {
+  background-image: url(../img/img-loan.png);
+  background-repeat: no-repeat;
+  background-position: top right;
+}
+
+ .services .services-buttons {
+  display: block;
+  position: relative;
+  width: 240px;
+  margin-right: 80px;
+}
+.services-buttons button {
+  width: 240px;
+  min-height: 61px;
+  background-color: var(--secondary);
+  color: var(--text-header);
+  padding-top: 13px;
+  padding-bottom: 17px;
+  padding-left: 22px;
+  border: none;
+  box-shadow: 0px 1px 0px #293449, inset 0px 1px 0px #405069;
+  font-size: 21px;
+  line-height: 30px;
+  text-align: left;
+}
+.services-buttons .button-current {
+  background-color: var(--text-header);
+  color: var(--secondary);
+  box-shadow: 0px 1px 0px #FFFFFF;
+}
+.services-buttons:after {
+  content: "";
+  position: absolute;
+  height: 279px;
+  width: 10px;
+  background-image: url(../img/servises-buttons-shade.png);
+  background-position: 0 0;
+  right: 0;
+  top: -39px;
+}
+.services-slide {
+  display: none;
+}
+.services-slider .current {
+  display: block;
+}
+
 /* About Tehnomart*/
 
 .flex-section {
@@ -743,53 +905,318 @@ body {
   margin: 0;
   padding: 0;
   display: flex;
+  justify-content: flex-start;
+  align-items: center;
   list-style: none;
   font-size: 13px;
   line-height: 18px;
+  text-transform: uppercase;
+  font-family: "PT Sans", "Tahoma", "sans-serif";
+  height: 59px;
 }
-.breadcrumps a {
+.breadcrumps-link:after {
+  content: "";
+  position: absolute;
+  width: 8px;
+  height: 12px;
+  background-image: url(../img/icon-right-small.svg);
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  top: 13%;
+  right: -25px;
+}
+.breadcrumps li {
+  display: block;
+  position: relative;
+  margin-right: 40px;
   color: var(--text-main);
+}
+
+.breadcrumps li:first-child {
+  width: 14px;
+  min-height: 14px;
+  background-image: url(../img/icon-home.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.breadcrumps-link {
+  display: block;
+  width: 100%;
+  height: 14px;
+  color: var(--text-main);
+
 }
 .breadcrumps-link:hover,
 .breadcrumps-link:focus {
   text-decoration: underline;
 }
+.breadcrumps-catalog {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 59px;
+  font-size: 13px;
+  line-height: 18px;
+  text-align: center;
+}
+.breadcrumps-catalog a {
+  display: block;
+  width: 100%;
+  height: 100%;
+  color: var(--text-main);
+  padding: 10px 15px;
+  text-transform: uppercase;
+}
+.breadcrumps-catalog-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 10px;
+  height: 38px;
+  min-width: 38px;
+  border: 1px solid var(--breadcrumps-btn);
+  border-radius: 2px;
+}
+.breadcrumps-catalog-btn:last-child {
+  min-width: 140px;
+}
+
+.breadcrumps-catalog a:not([href]) {
+  color: var(--text-header);
+  background-color: var(--button);
+  border: 1px solid var(--button);
+}
+.breadcrumps-catalog-btn:hover {
+  border-color: var(--breadcrumps-btn-hover);
+}
+.breadcrumps-catalog-btn:active {
+  border-color: var(--button);
+}
+/* Фильтрр*/
+
+.filters-all fieldset {
+  padding: 0;
+  margin: 0;
+  border: none;
+  margin-top: 17px;
+  margin-bottom: 10px;
+  border-bottom: 1px solid var(--range-scale);
+}
+.filters-all fieldset:last-of-type {
+  border: none;
+}
+
+.filters-all {
+  font-family: "PT Sans", "Tahoma", sans-serif;
+  text-transform: uppercase;
+  width: 220px;
+  margin-right: 20px;
+  grid-row: 3;
+  grid-column: 1;
+}
+.filter-title {
+  margin: 0;
+  margin-bottom: 15px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 18px;
+  display: block;
+  width: 100%;
+  font-size: 13px;
+  font-weight: normal;
+  line-height: 18px;
+
+  background-color: var(--filters);
+}
+/* Фильтр цены */
+.range-filter {
+  padding-bottom: 25px;
+}
+.price-controls {
+  width: 100%;
+  margin-top: 9px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.range-controls {
+  position: relative;
+  height: 80px;
+  width: 100%;
+  margin-top: 11px;
+  padding: 39px 22px;
+  background-color: var(--filters);
+  border-radius: 5px;
+}
+.range-controls .scale {
+  height: 2px;
+  width: 180px;
+  background-color: var(--range-scale);
+}
+.scale .bar {
+  height: 2px;
+  width: 80%;
+  background-color: var(--purchase-hover);
+}
+.toggle {
+  position: absolute;
+  top: 32px;
+  width: 4px;
+  height: 4px;
+  padding: 0;
+  border: 8px solid var(--text-header);
+  border-radius: 50%;
+  background-color: var(--toggle);
+  box-shadow: 0 2px 1px 0 var(--toggle);
+  cursor: pointer;
+}
+.range-controls .toggle-min {
+  left: 20px;
+}
+.range-controls .toggle-max {
+  left: 160px;
+}
+.price-controls label {
+  font-size: 17px;
+  line-height: 18px;
+}
+.price-controls input {
+  font-size: inherit;
+  line-height: inherit;
+  width: 95px;
+  text-align: center;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border: none;
+  border-radius: 5px;
+  background-color: var(--filters);
+}
+.price-controls p {
+  margin: 0;
+  padding: 0;
+  font-size: 16px;
+  line-height: 18px;
+}
+
 .filter ul {
   list-style: none;
   font-size: 15px;
   line-height: 19px;
 }
+
 .filter legend {
   font-weight: bold;
   font-size: 17px;
   line-height: 30px;
 }
-.sorter-list {
-  list-style: none;
-  font-size: 13px;
-  line-height: 18px;
+
+.filter-option label {
+  position: relative;
+  display: block;
+  cursor: pointer;
+  user-select: none;
+  margin-bottom: 20px;
 }
+.filter-input-checkbox:not(:checked) + label::before {
+  content: "";
+  position: absolute;
+  width: 23px;
+  height: 23px;
+  border: 2px solid var(--checkbox);
+  border-radius: 3px;
+  left: -35px;
+  top: -3px;
+  opacity: 0.7;
+}
+
+.filter-input-checkbox:checked + label:after {
+  content: "";
+  position: absolute;
+  width: 27px;
+  height: 23px;
+  background-image: url(../img/checkbox-on.svg);
+  left: -35px;
+  top: -3px;
+  opacity: 0.7;
+}
+
+.filter-input-checkbox:hover + label::before,
+.filter-input-checkbox:hover + label::after {
+  opacity: 1;
+}
+
+.filter-input-checkbox:active + label::before,
+.filter-input-checkbox:active + label::after {
+  opacity: 0.4;
+}
+
+.filter-input-radio + label::before {
+  content: "";
+  position: absolute;
+  width: 23px;
+  height: 23px;
+  border: 4px solid var(--checkbox);
+  border-radius: 50%;
+  left: -35px;
+  top: -3px;
+  opacity: 0.7;
+}
+
+
+.filter-input-radio:checked + label:after {
+  content: "";
+  position: absolute;
+  width: 9px;
+  height: 9px;
+  background-color: var(--checkbox);
+  border-radius: 50%;
+  left: -28px;
+  top: 4px;
+  opacity: 0.7;
+}
+.filter-input-radio:hover + label::before,
+.filter-input-radio:hover + label::after {
+  opacity: 1;
+}
+
+.filter-input-radio:active + label::before,
+.filter-input-radio:active + label::after {
+  opacity: 0.4;
+}
+.filters-all button {
+  width: 100%;
+  min-height: 38px;
+  text-align: center;
+  text-transform: uppercase;
+  border: 1px solid #E5E5E5;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+
+/*  Каталог товаров*/
+
 .catalog-grid {
   display: grid;
-  grid-template-columns: min-content fr;
+  grid-template-columns: 220px fr;
   grid-template-rows: min-content min-content fr;
   align-content: start;
 }
 
 .catalog-grid .breadcrumps {
-  grid-column: 1 / -1;
+  grid-row: 1;
+  grid-column: 1 / 3;
 }
 
 .catalog-grid .page-title {
   grid-row: 2;
   grid-column: 1 / 3;
 }
-
-.filters {
-  grid-row: 3;
-  grid-column: 1;
-}
 .catalog {
+  font-family: "PT Sans", "Tahoma", sans-serif;
   grid-row: 3;
   grid-column: 2;
 
@@ -804,21 +1231,85 @@ body {
   padding-top: 30px;
   padding-bottom: 30px;
 }
-.sorter-list {
+
+.sorter-section {
+  width: 100%;
+  min-height: 38px;
+  text-transform: uppercase;
+  font-size: 13px;
+  line-height: 18px;
+  background-color: var(--filters);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 19px;
+  padding-right: 14px;
+  margin-bottom: 28px;
+}
+
+
+.sorter-header {
+  display: block;
+  flex-basis: 180px;
+  font-weight: normal;
   margin: 0;
   padding: 0;
 }
+
+.sorter-list {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: space-between;
+  list-style: none;
+  font-size: 13px;
+  line-height: 18px;
+  flex-basis: 450px;
+}
+
 .sorter-list a {
+  display: block;
   color: var(--text-main);
   opacity: 0.3;
+  text-decoration: dotted underline var(--button);
 }
 .sorter-list a:hover,
-.sorter-list a:active{
+.sorter-list a:focus {
   opacity: 1;
+  text-decoration: underline var(--button);
+}
+
+.sorter-list a:active {
+  color: var(--button);
+  opacity: 1;
+  text-decoration: none;
 }
 .sorter-list a:not([href]) {
   color: var(--button);
   opacity: 1;
+  text-decoration: none;
+}
+
+.sorter-up {
+  width: 20px;
+  height: 20px;
+  background-image: url(../img/icon-down-black.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  transform: rotate(180deg);
+}
+.sorter-down {
+  width: 20px;
+  height: 20px;
+  background-image: url(../img/icon-down-black.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.sorter-down:active,
+.sorter-up:active {
+  background-image: url(../img/icon-down-red.svg);
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 .catalog-list {
@@ -971,49 +1462,6 @@ body {
   color: var(--secondary);
   border: 3px solid #63A63E;
   border-radius: 2px;
-}
-
-.filters {
-  width: 185px;
-}
-.filters fieldset {
-  padding: 0;
-  margin: 0;
-  border: none;
-}
-.breadcrumps-catalog {
-  padding: 0;
-  margin: 0;
-  list-style: none;
-  display: flex;
-}
-.breadcrumps-catalog a {
-  width: 100%;
-  height: 100%;
-  color: var(--text-main);
-  width: 100%;
-  height: 100%;
-}
-.breadcrumps-catalog-btn {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-right: 10px;
-  height: 38px;
-  min-width: 38px;
-  border: 1px solid var(--breadcrumps-btn);
-  border-radius: 2px;
-}
-.breadcrumps-catalog a:not([href]) {
-  color: var(--text-header);
-  background-color: var(--button);
-  border: 1px solid var(--button);
-}
-.breadcrumps-catalog-btn:hover {
-  border-color: var(--breadcrumps-btn-hover);
-}
-.breadcrumps-catalog-btn:active {
-  border-color: var(--button);
 }
 /* Perforators description*/
 
