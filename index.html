@@ -196,7 +196,7 @@
           </a>
         </li>
         <li class="partner-item">
-          <a class="partner" href="blank.html"> <img src="img/Interskol.png" width="200" height="88" alt="Интерскол">
+          <a class="partner" href="blank.html"> <img src="img/interskol.png" width="200" height="88" alt="Интерскол">
           </a>
         </li>
         <li class="partner-item">
@@ -291,10 +291,10 @@
         <h2>Контакты</h2>
         <p>Вы можете забрать товар сами, <br>
           заехав в наш офис:</p>
-        <a href="blank.html">
+        <a class="map-link" href="blank.html">
           <img src="img/map-small.png" width="300" height="158" alt="карта проезда">
         </a>
-        <a class="button-main" href="blank.html">Заблудились? Напишите нам!</a>
+        <a class="button-main write-us" href="blank.html">Заблудились? Напишите нам!</a>
       </section>
     </div>
   </main>
@@ -353,31 +353,54 @@
 
   </footer>
 
-  <section class="form-popup">
-    <h2 class="visually-hidden">Оформить заказ</h2>
-    <form action="https://echo.htmlacademy.ru/" method="POST">
+  <section class="popup form-popup">
+    <h2 class="visually-hidden">Отправить письмо</h2>
+    <form  class="write-us-form" action="https://echo.htmlacademy.ru/" method="POST">
       <p>
         <label for="username"> Ваше имя </label>
-        <input type="text" name="username" id="username" placeholder="Имя Фамилия" required>
+        <input class="write-us-username" type="text" name="username" id="username" placeholder="Имя Фамилия" required>
       </p>
       <p>
         <label for="email"> Ваш e-mail </label>
-        <input type="email" name="e-mail" id="email" placeholder="email@example.com" required>
+        <input class="write-us-email" type="email" name="e-mail" id="email" placeholder="email@example.com" required>
       </p>
       <p>
         <label for="message">Текст письма</label>
-        <textarea id="message" name="message" placeholder="В свободной форме"></textarea>
+        <textarea class="form-textarea" id="message" name="message" placeholder="В свободной форме"></textarea>
       </p>
-      <button type="submit">оформить заказ</button>
+      <button class="button-main" type="submit">Отправить</button>
     </form>
-    <button type="button"> <span class="visually-hidden"> Закрыть</span> </button>
+    <div class="popup-background"></div>
+    <button class="button-close" type="button" aria-label="закрыть"></button>
   </section>
 
-  <section class="map-popup">
+  <section class="popup map-popup">
     <h2 class="visually-hidden">Карта проезда</h2>
-    <!-- здесь булет попап карта-->
-    <button type="button"> <span class="visually-hidden">Закрыть</span></button>
+    <iframe
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2435.1114313816124!2d30.32104969405794!3d59.93882447257307!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCDQoNC-0YHRgdC40Y8sIDE5MTE4Ng!5e0!3m2!1sru!2sae!4v1591713948061!5m2!1sru!2sae"
+      width="943" height="449" allowfullscreen
+      title="адрес магазина: г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8"></iframe>
+    <img src="img/map-popup.png"  width="943" height="449" alt="адрес магазина: г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8">
+    <button class="button-close map-close" type="button" aria-label="закрыть"></button>
   </section>
+
+  <section class="popup popup-basket">
+    <h3>Товар добавлен в корзину!</h3>
+    <ul class="popup-buttons">
+      <li>
+        <a class="button-main" href="blank.html">Оформить заказ</a>
+      </li>
+      <li>
+        <a class="button-main continue-shopping" href="blank.html">продолжить покупки</a>
+      </li>
+    </ul>
+    <div class="popup-background"></div>
+    <button class="button-close basket-close" type="button" aria-label="закрыть"></button>
+  </section>
+
+  <script src="js/write-us.js"></script>
+  <script src="js/basket.js"></script>
+  <script src="js/map.js"></script>
 
 </body>
 

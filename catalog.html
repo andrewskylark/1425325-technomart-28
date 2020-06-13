@@ -75,12 +75,12 @@
   </header>
   <main>
     <div class="wrapper catalog-grid">
-      <ul class="breadcrumps">
-        <li> <a class="breadcrumps-link" href="index.html" aria-label="главная страница"></a>
+      <ul class="breadcrumbs">
+        <li> <a class="breadcrumbs-link" href="index.html" aria-label="главная страница"></a>
         </li>
-        <li> <a class="breadcrumps-link" href="catalog.html">Каталог</a>
+        <li> <a class="breadcrumbs-link" href="catalog.html">Каталог</a>
         </li>
-        <li> <a class="breadcrumps-link" href="blank.html">Инструмент</a>
+        <li> <a class="breadcrumbs-link" href="blank.html">Инструмент</a>
         </li>
         <li> <a> Перфораторы </a> </li>
       </ul>
@@ -292,17 +292,17 @@
           </li>
         </ul>
 
-        <ul class="breadcrumps-catalog">
-          <li class="breadcrumps-catalog-btn">
+        <ul class="breadcrumbs-catalog">
+          <li class="breadcrumbs-catalog-btn">
             <a> 1 </a>
           </li>
-          <li class="breadcrumps-catalog-btn">
+          <li class="breadcrumbs-catalog-btn">
             <a href="blank.html">2</a>
           </li>
-          <li class="breadcrumps-catalog-btn">
+          <li class="breadcrumbs-catalog-btn">
             <a href="blank.html">3</a>
           </li>
-          <li class="breadcrumps-catalog-btn">
+          <li class="breadcrumbs-catalog-btn">
             <a class="link" href="blank.html">Следующая</a>
           </li>
         </ul>
@@ -379,19 +379,21 @@
 
   </footer>
 
-
-  <section class="popup-buy visually-hidden">
+  <section class="popup popup-basket">
     <h3>Товар добавлен в корзину!</h3>
-    <ul>
+    <ul class="popup-buttons">
       <li>
-        <a href="blank.html">Оформить заказ</a>
+        <a class="button-main" href="blank.html">Оформить заказ</a>
       </li>
       <li>
-        <a href="blank.html">продолжить покупки</a>
+        <a class="button-main continue-shopping" href="blank.html">продолжить покупки</a>
       </li>
     </ul>
-    <button type="button"> <span class="cisually-hidden">Закрыть</span></button>
+    <div class="popup-background"></div>
+    <button class="button-close basket-close" type="button" aria-label="закрыть"></button>
   </section>
+
+  <script src="js/basket.js"></script>
 
 </body>
 
