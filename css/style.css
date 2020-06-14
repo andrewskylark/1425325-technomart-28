@@ -159,25 +159,11 @@ body {
   opacity: 1;
 }
 
-.search-icon {
-  width: 17px;
-  height: 17px;
-  top: 10px;
-  left: 17px;
-  position: absolute;
-  background-image: url("../img/icon-search-focus.svg");
-  background-position: 0 0;
-  background-repeat: no-repeat;
-  z-index: -1;
-}
-
-.header-search:active .search-icon,
-.header-search:focus .search-icon {
-  z-index: 5;
-}
-
 .input-search:focus {
   background-color: var(--text-header);
+  background-image: url(../img/icon-search-focus.svg);
+  background-repeat: no-repeat;
+  background-position: 16px 10px;
 }
 
 .input-search::-webkit-input-placeholder {
