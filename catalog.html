@@ -4,11 +4,9 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link
-    href="https://fonts.googleapis.com/css2?family=Cuprum:ital,wght@0,400;0,700;1,400&family=PT+Sans:wght@400;700&display=swap"
-    rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cuprum:ital,wght@0,400;0,700;1,400&family=PT+Sans:wght@400;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/normalize.css">
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/style.min.css">
   <title>HTML Academy: Техномарт</title>
 </head>
 
@@ -21,8 +19,8 @@
             width="107" height="17" alt="Техномарт лого"> </a>
 
         <form class="header-search" action="https://echo.htmlacademy.ru/" method="get">
-          <label class="search-icon" for="search"></label>
           <input class="input-search" type="search" name="search" id="search" placeholder="Поиск:">
+          <label class="search-icon" for="search"></label>
           <button type="submit" class="visually-hidden">Отправить</button>
         </form>
 
@@ -75,7 +73,7 @@
   <main>
     <div class="wrapper catalog-grid">
       <ul class="breadcrumbs">
-        <li> <a class="breadcrumbs-link" href="index.html" aria-label="главная страница"></a>
+        <li> <a class="breadcrumbs-link home" href="index.html" aria-label="главная страница"></a>
         </li>
         <li> <a class="breadcrumbs-link" href="catalog.html">Каталог</a>
         </li>
@@ -161,6 +159,7 @@
       </section>
 
       <section class="catalog">
+        <h3 class="visually-hidden">Каталог</h3>
         <div class="sorter-section">
           <p class="sorter-header">Сортировка:</p>
           <ul class="sorter-list">
@@ -185,7 +184,7 @@
         </div>
 
         <ul class="catalog-list">
-          <li class="catalog-item">
+          <li class="catalog-item" tabindex="0">
             <img src="img/bfg6000.jpg" width="144" height="128" alt="Bosch BFG 6000">
             <a href="blank.html">
               <h4 class="catalog-item-title">Перфоратор BOSCH BFG 6000</h4>
@@ -193,11 +192,11 @@
             <p class="old-price"> 30500 P.</p>
             <p class="current-price"> 25500 P.</p>
             <ul class="item-purchase">
-              <li> <a class="item-purchase-btn" href="blank.html"> Купить </a> </li>
+              <li> <a class="item-purchase-btn" href="bookmark.html"> Купить </a> </li>
               <li> <a class="item-bookmark-btn" href="blank.html"> В закладки </a> </li>
             </ul>
           </li>
-          <li class="catalog-item">
+          <li class="catalog-item" tabindex="0">
             <img src="img/bfg6000.jpg" width="144" height="128" alt="Bosch BFG 6000">
             <a href="blank.html">
               <h4 class="catalog-item-title">Перфоратор BOSCH BFG 6000</h4>
@@ -205,11 +204,11 @@
             <p class="old-price"> 30500 P.</p>
             <p class="current-price"> 25500 P.</p>
             <ul class="item-purchase">
-              <li> <a class="item-purchase-btn" href="blank.html"> Купить </a> </li>
+              <li> <a class="item-purchase-btn" href="bookmark.html"> Купить </a> </li>
               <li> <a class="item-bookmark-btn" href="blank.html"> В закладки </a> </li>
             </ul>
           </li>
-          <li class="catalog-item new-item">
+          <li class="catalog-item new-item" tabindex="0">
             <img src="img/bfg6000.jpg" width="144" height="128" alt="Bosch BFG 6000">
             <a href="blank.html">
               <h4 class="catalog-item-title">Перфоратор BOSCH BFG 6000</h4>
@@ -217,11 +216,11 @@
             <p class="old-price"> 30500 P.</p>
             <p class="current-price"> 25500 P.</p>
             <ul class="item-purchase">
-              <li> <a class="item-purchase-btn" href="blank.html"> Купить </a> </li>
+              <li> <a class="item-purchase-btn" href="bookmark.html"> Купить </a> </li>
               <li> <a class="item-bookmark-btn" href="blank.html"> В закладки </a> </li>
             </ul>
           </li>
-          <li class="catalog-item new-item">
+          <li class="catalog-item new-item" tabindex="0">
             <img src="img/bfg3000.jpg" width="127" height="112" alt="Bosch BFG 3000">
             <a href="blank.html">
               <h4 class="catalog-item-title">Перфоратор BOSCH BFG 3000</h4>
@@ -229,11 +228,11 @@
             <p class="old-price"> 22500 P.</p>
             <p class="current-price"> 15500 P.</p>
             <ul class="item-purchase">
-              <li> <a class="item-purchase-btn" href="blank.html"> Купить </a> </li>
+              <li> <a class="item-purchase-btn" href="bookmark.html"> Купить </a> </li>
               <li> <a class="item-bookmark-btn" href="blank.html"> В закладки </a> </li>
             </ul>
           </li>
-          <li class="catalog-item">
+          <li class="catalog-item" tabindex="0">
             <img src="img/bfg6000.jpg" width="144" height="128" alt="Bosch BFG 6000">
             <a href="blank.html">
               <h4 class="catalog-item-title">Перфоратор BOSCH BFG 6000</h4>
@@ -241,11 +240,11 @@
             <p class="old-price"> 30500 P.</p>
             <p class="current-price"> 25500 P.</p>
             <ul class="item-purchase">
-              <li> <a class="item-purchase-btn" href="blank.html"> Купить </a> </li>
+              <li> <a class="item-purchase-btn" href="bookmark.html"> Купить </a> </li>
               <li> <a class="item-bookmark-btn" href="blank.html"> В закладки </a> </li>
             </ul>
           </li>
-          <li class="catalog-item new-item">
+          <li class="catalog-item new-item" tabindex="0">
             <img src="img/bfg2000.jpg" width="127" height="112" alt="Bosch BFG 2000">
             <a href="blank.html">
               <h4 class="catalog-item-title">Перфоратор BOSCH BFG 2000</h4>
@@ -253,11 +252,11 @@
             <p class="old-price"></p>
             <p class="current-price"> 12500 P.</p>
             <ul class="item-purchase">
-              <li> <a class="item-purchase-btn" href="blank.html"> Купить </a> </li>
+              <li> <a class="item-purchase-btn" href="bookmark.html"> Купить </a> </li>
               <li> <a class="item-bookmark-btn" href="blank.html"> В закладки </a> </li>
             </ul>
           </li>
-          <li class="catalog-item new-item">
+          <li class="catalog-item new-item" tabindex="0">
             <img src="img/bfg3000.jpg" width="127" height="112" alt="Bosch BFG 3000">
             <a href="blank.html">
               <h4 class="catalog-item-title">Перфоратор BOSCH BFG 3000</h4>
@@ -265,11 +264,11 @@
             <p class="old-price"> 22500 P.</p>
             <p class="current-price"> 15500 P.</p>
             <ul class="item-purchase">
-              <li> <a class="item-purchase-btn" href="blank.html"> Купить </a> </li>
+              <li> <a class="item-purchase-btn" href="bookmark.html"> Купить </a> </li>
               <li> <a class="item-bookmark-btn" href="blank.html"> В закладки </a> </li>
             </ul>
           </li>
-          <li class="catalog-item">
+          <li class="catalog-item" tabindex="0">
             <img src="img/bfg6000.jpg" width="144" height="128" alt="Bosch BFG 6000">
             <a href="blank.html">
               <h4 class="catalog-item-title">Перфоратор BOSCH BFG 6000</h4>
@@ -277,11 +276,11 @@
             <p class="old-price"> 30500 P.</p>
             <p class="current-price"> 25500 P.</p>
             <ul class="item-purchase">
-              <li> <a class="item-purchase-btn" href="blank.html"> Купить </a> </li>
+              <li> <a class="item-purchase-btn" href="bookmark.html"> Купить </a> </li>
               <li> <a class="item-bookmark-btn" href="blank.html"> В закладки </a> </li>
             </ul>
           </li>
-          <li class="catalog-item new-item">
+          <li class="catalog-item new-item" tabindex="0">
             <img src="img/bfg2000.jpg" width="127" height="112" alt="Bosch BFG 2000">
             <a href="blank.html">
               <h4 class="catalog-item-title">Перфоратор BOSCH BFG 6000</h4>
@@ -289,7 +288,7 @@
             <p class="old-price"></p>
             <p class="current-price"> 12500 P.</p>
             <ul class="item-purchase">
-              <li> <a class="item-purchase-btn" href="blank.html"> Купить </a> </li>
+              <li> <a class="item-purchase-btn" href="bookmark.html"> Купить </a> </li>
               <li> <a class="item-bookmark-btn" href="blank.html"> В закладки </a> </li>
             </ul>
           </li>
@@ -361,7 +360,7 @@
       <div class="wrapper">
 
         <p>© 2010–2019 Компания «Техномарт»<br>
-            Все права защищены</p>
+           Все права защищены</p>
 
         <ul class="social">
           <li> <a class="social-btn social-vk" href="blank.html" aria-label="Вконтакте"></a> </li>
@@ -374,8 +373,8 @@
           <a href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a>
         </p>
 
-        <p class="footer-dev">Разработано — <br>
-          <a href="https://htmlacademy.ru/intensive/htmlcss"> htmlacademy.ru</a>
+        <p class="footer-dev">Разработано —<br>
+          <a href="https://htmlacademy.ru/intensive/htmlcss">htmlacademy.ru</a>
         </p>
       </div>
     </div>
@@ -396,7 +395,7 @@
     <button class="button-close basket-close" type="button" aria-label="закрыть"></button>
   </section>
 
-  <script src="js/basket.js"></script>
+  <script src="js/scripts.min.js"></script>
 
 </body>
 
